@@ -1,0 +1,55 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+
+.banner {
+  margin-bottom: 80px;
+
+  .wrapper {
+    @include container;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .contentTitle {
+        max-width: 837px;
+        margin-bottom: 24px;
+        font-size: 80px;
+        line-height: 96px;
+        text-align: center;
+      }
+
+      .contentText {
+        max-width: 620px;
+        margin-bottom: 24px;
+        text-align: center;
+        font-size: 20px;
+        line-height: 28px;
+      }
+
+      .contentLink {
+        @include secondaryLink;
+        margin-bottom: 60px;
+      }
+
+      .contentMainImageWrapper {
+        position: relative;
+        left: -35px;
+        max-width: 736px;
+
+        .contentMainImage {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .contentFooterImageWrapper {
+        .contentFooterImage {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

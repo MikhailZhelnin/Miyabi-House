@@ -1,0 +1,74 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+
+.testimonials {
+  overflow: hidden;
+
+  .wrapper {
+    @include container;
+    position: relative;
+
+    .content {
+      .contentTitle {
+        @include sectionTitle;
+      }
+
+      .contentList {
+
+        .contentListItem {
+          .contentListItemImageWrapper {
+            display: flex;
+            justify-content: center;
+
+            .contentListItemImage {
+
+            }
+          }
+        }
+      }
+
+      .contentControlLeft {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 50%;
+        background-color: transparent;
+        cursor: pointer;
+        transition: background-color .2s ease-in-out;
+
+        &:hover {
+          background-color: rgba(51, 63, 114, 0.1);
+        }
+      }
+      .contentControlRight {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 50%;
+        background-color: transparent;
+        cursor: pointer;
+        transition: background-color .2s ease-in-out;
+
+        &:hover {
+          background-color: rgba(51, 63, 114, 0.1);
+        }
+      }
+      .contentControlIcon {
+        font-size: 30px;
+        color: $main-color;
+      }
+    }
+  }
+}

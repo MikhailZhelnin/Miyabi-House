@@ -1,0 +1,56 @@
+@import "./_variables.scss";
+
+// Container ________________________
+@mixin container {
+  max-width: 1280px;
+  //padding: 0 18px 0 18px;
+  margin: auto;
+}
+
+// Links __________________________
+@mixin link {
+  display: inline-flex;
+  justify-content: center;
+  padding: 16px 45px;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  border-bottom-right-radius: 16px;
+  border-top-left-radius: 16px;
+  border: none;
+  cursor: pointer;
+  transition: color .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+@mixin mainLink {
+  @include link;
+  color: $secondary-color;
+  background-color: $third-color;
+  border: 1px solid $secondary-color;
+
+  &:hover {
+    color: $third-color;
+    background-color: $secondary-color;
+  }
+}
+
+@mixin secondaryLink {
+  @include link;
+  color: $third-color;
+  background-color: $secondary-color;
+  border: 1px solid $secondary-color;
+
+  &:hover {
+    color: $secondary-color;
+    background-color: $third-color;
+  }
+}
+
+// Section title
+@mixin sectionTitle {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 48px;
+  line-height: 57px;
+}

@@ -1,0 +1,60 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+
+.specialties {
+  margin-bottom: 80px;
+
+  .wrapper {
+    @include container;
+
+    .content {
+      .contentTitle {
+        @include sectionTitle;
+      }
+
+      .contentList {
+        display: flex;
+        justify-content: space-between;
+
+        .contentListItem {
+          padding: 24px;
+          width: 23%;
+          border: 1px solid $main-color;
+          border-bottom-right-radius: 36px;
+          border-top-left-radius: 36px;
+
+          .contentListItemImageWrapper {
+            margin-bottom: 20px;
+            width: 100%;
+
+            .contentListItemImage {
+              width: 100%;
+            }
+          }
+
+          .contentListItemInfo {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 20px;
+
+            .contentListItemInfoTitle {
+              font-size: 32px;
+              line-height: 38px;
+            }
+
+            .contentListItemInfoText {
+              font-size: 14px;
+              line-height: 19px;
+            }
+          }
+
+          .contentListItemLink {
+            @include mainLink;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

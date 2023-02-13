@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import {Kaushan_Script} from "@next/font/google";
 
 import Header from "@/layout/Header/Header";
+import Footer from "@/layout/Footer/Footer";
 
 import styles from './Main.module.scss'
 
@@ -23,6 +24,8 @@ const Main = (props: IMainProps) => {
       <Header />
 
       <main>{props.children}</main>
+
+      <Footer/>
 
     </div>
   )

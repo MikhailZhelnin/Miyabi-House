@@ -15,16 +15,16 @@ const Header = () => {
           <h2 className={styles.siteNavTitle}>Miyabi House</h2>
           <ul className={`${styles.siteNavList} ${ubuntu.className}`}>
             <li className={styles.siteNavListItem}>
-              <Link href='#' className={styles.siteNavListItemLink}>Home</Link>
+              <Link href='/' className={styles.siteNavListItemLink}>Home</Link>
             </li>
             <li className={styles.siteNavListItem}>
-              <Link href='#' className={styles.siteNavListItemLink}>Menu</Link>
+              <Link href='/' className={styles.siteNavListItemLink}>Menu</Link>
             </li>
             <li className={styles.siteNavListItem}>
-              <Link href='#' className={styles.siteNavListItemLink}>About</Link>
+              <Link href='/' className={styles.siteNavListItemLink}>About</Link>
             </li>
             <li className={styles.siteNavListItem}>
-              <Link href='#' className={styles.siteNavListItemLink}>Sessions</Link>
+              <Link href='/' className={styles.siteNavListItemLink}>Sessions</Link>
             </li>
           </ul>
           <ul className={styles.userNavList}>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import {Ubuntu} from "@next/font/google";
 
 import {ISpecialtiesItem} from "../../../models";
 
@@ -8,6 +9,8 @@ import styles from './Specialties.module.scss'
 interface SpecialtiesProps {
   specialties: ISpecialtiesItem[],
 }
+
+const ubuntu = Ubuntu({weight: '400', subsets: ['latin']})
 
 const Specialties = ({specialties}: SpecialtiesProps) => {
   return (
@@ -23,7 +26,7 @@ const Specialties = ({specialties}: SpecialtiesProps) => {
                 </div>
                 <div className={styles.contentListItemInfo}>
                   <h3 className={styles.contentListItemInfoTitle}>{item.title}</h3>
-                  <span className={styles.contentListItemInfoText}>{item.varieties} varieties</span>
+                  <span className={`${styles.contentListItemInfoText} ${ubuntu.className}`}>{item.varieties} varieties</span>
                 </div>
                 <Link href="/" className={styles.contentListItemLink}>Order now</Link>
               </div>

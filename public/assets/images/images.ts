@@ -13,7 +13,7 @@ export const images = {
   },
   testimonials: {
     first: require("./testimonials-1.png"),
-    second: require("./testimonials-1.png"),
-    third: require("./testimonials-1.png"),
+    second: require("./testimonials-2.png"),
+    third: require("./testimonials-3.png"),
   }
 }

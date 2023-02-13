@@ -6,6 +6,13 @@
   padding: 40px 0;
   border-bottom: 1px solid rgba(233, 218, 198, 1);
 
+  @media (max-width: $tablet) {
+    padding: 30px 0;
+  }
+  @media (max-width: $medium_mobile) {
+    margin-bottom: 40px;
+  }
+
   .wrapper {
     @include container;
 
@@ -17,10 +24,18 @@
       .siteNavTitle {
         font-size: 30px;
         line-height: 24px;
+
+        @media (max-width: $medium_mobile) {
+          font-size: 25px;
+        }
       }
 
       .siteNavList {
         display: flex;
+
+        @media (max-width: $tablet) {
+          display: none;
+        }
 
         .siteNavListItem {
           margin-right: 48px;
@@ -63,6 +78,10 @@
       .userNavList {
         display: flex;
 
+        @media (max-width: $tablet) {
+          display: none;
+        }
+
         .userNavListItem {
           margin-right: 20px;
 
@@ -89,6 +108,21 @@
               }
             }
           }
+        }
+      }
+      .mobileMenu {
+        padding: 7px 0 7px 7px;
+        display: none;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        @media (max-width: $tablet) {
+          display: flex;
+        }
+
+        .mobileMenuIcon {
+          font-size: 30px;
         }
       }
     }

@@ -3,6 +3,10 @@
 
 .specialties {
   margin-bottom: 80px;
+  
+  @media (max-width: $medium_mobile) {
+    margin-bottom: 40px;
+  }
 
   .wrapper {
     @include container;
@@ -16,12 +20,46 @@
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: $tablet) {
+          flex-wrap: wrap;
+        }
+
+        @media (max-width: 900px) {
+          justify-content: space-around;
+        }
+
         .contentListItem {
           padding: 24px;
           width: 23%;
           border: 1px solid $main-color;
           border-bottom-right-radius: 36px;
           border-top-left-radius: 36px;
+
+          @media (max-width: $tablet) {
+            width: 30%;
+            margin-bottom: 45px;
+          }
+
+          @media (max-width: 900px) {
+            width: 40%;
+            margin-bottom: 45px;
+          }
+
+          @media (max-width: $mobile) {
+            width: 45%;
+          }
+
+          @media (max-width: $medium_mobile) {
+            width: 60%;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          @media (max-width: $small_mobile) {
+            width: 85%;
+          }
 
           .contentListItemImageWrapper {
             margin-bottom: 20px;
@@ -41,6 +79,10 @@
             .contentListItemInfoTitle {
               font-size: 32px;
               line-height: 38px;
+
+              @media (max-width: $medium_mobile) {
+                font-size: 27px;
+              }
             }
 
             .contentListItemInfoText {
@@ -52,6 +94,11 @@
           .contentListItemLink {
             @include mainLink;
             width: 100%;
+            padding: 16px 0;
+
+            @media (max-width: $tablet) {
+              padding: 10px 0;
+            }
           }
         }
       }

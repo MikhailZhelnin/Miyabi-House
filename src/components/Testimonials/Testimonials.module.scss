@@ -5,6 +5,10 @@
   overflow: hidden;
   margin-bottom: 80px;
 
+  @media (max-width: $medium_mobile) {
+    margin-bottom: 0;
+  }
+
   .wrapper {
     @include container;
     position: relative;
@@ -12,6 +16,10 @@
     .content {
       .contentTitle {
         @include sectionTitle;
+
+        @media (max-width: $small_mobile) {
+          margin-bottom: 15px;
+        }
       }
 
       .contentList {
@@ -22,7 +30,8 @@
             justify-content: center;
 
             .contentListItemImage {
-
+              width: 100%;
+              object-fit: contain;
             }
           }
         }
